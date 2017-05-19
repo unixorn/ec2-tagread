@@ -86,6 +86,7 @@ def loadTag(connection, instanceId, tagname="Name"):
   else:
     tagValue = None
     logging.error("No %s tag for %s", tagname, instanceId)
+    raise Exception("No %s tag for %s" % (tagname, instanceId))
   return tagValue
 
 
